@@ -1,0 +1,44 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .controls {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-box {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    height: 300px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border: 1px solid #ccc; 
+    background-color: #fff; 
+  }
+  
+  .task-box p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Customize the scrollbar */
+  .task-box::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .task-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .task-box::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  .task-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

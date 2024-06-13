@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERD</title>
+</head>
+<link rel="stylesheet" href="style7.css">
+<body>
+  <div class="wrapper">
+    <div class="controls">
+      <h1>ERD</h1>
+    </div>
+    <ul class="task-box">
+
+        <li>
+            <p><b>Andmeskeemide Diagrammid (ERD)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>Entity-Relationship Diagram (ERD) on visuaalne tööriist, mida kasutatakse andmebaaside loogilise struktuuri kujutamiseks. ERD-d kirjeldavad, kuidas andmed on seotud andmebaasisüsteemi erinevate objektide vahel. Neid diagramme kasutatakse sageli andmebaasi kujundamisel ja arendamisel.</p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>Põhikontseptsioonid</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>1. Entiteet (Entity)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Eesmärk</b>: Esindab andmebaasis talletatavat objekti või kontseptsiooni.<br/>
+                <b>Näited</b>: Töötaja, Klient, Tellimus.<br/>
+                <b>Sümbol</b>: Ristkülik.<br/>
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>2. Atribuut (Attribute)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Eesmärk</b>: Entiteedi omadused või tunnused, mis salvestavad konkreetseid andmeid.<br/>
+                <b>Näited</b>: Nimi, Vanus, Aadress.<br/>
+                <b>Sümbol</b>: Ellips.<br/>
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>3. Seos (Relationship)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Eesmärk</b>: Kirjeldab, kuidas entiteedid omavahel seotud on.<br/>
+                <b>Näited</b>: Töötab, Esitab, Ostab.<br/>
+                <b>Sümbol</b>: Teemant.<br/>
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>Võti (Key)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Eesmärk</b>: Unikaalsed tuvastajad, mis eristavad entiteete.<br/>
+                <b>Näited</b>: Põhivõti (Primary Key), Võõrvõti (Foreign Key).<br/>
+                <b>Sümbol</b>: Põhivõtme jaoks allajoonitud atribuut.<br/>
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>Tüübid ja Kardinaalsused</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>1. Üks-ühele (One-to-One)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Näide</b>: Igal töötajal on üks töölaud ja igal töölaul on üks töötaja.<br/>
+                <b>Sümbol</b>: 1:1<br/>
+            </p>
+        </li>
+        
+        <br/>
+
+        <li>
+            <p><b>2. Üks-mitmele (One-to-Many)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Näide</b>: Üks klient võib esitada mitu tellimust, kuid iga tellimus kuulub ühele kliendile.<br/>
+                <b>Sümbol</b>: 1<br/>
+            </p>
+        </li>
+        
+        <br/>
+
+        <li>
+            <p><b>3. Mitu-mitmele (Many-to-Many)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Näide</b>:  Paljudel õpilastel võib olla palju kursusi ja iga kursus võib hõlmata palju õpilasi.<br/>
+                <b>Sümbol</b>: M<br/>
+            </p>
+        </li>
+        
+        <br/>
+
+        <li>
+            <p><b>ERD Komponendid</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>1. Entiteedid</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                Kujutavad reaalmaailma objekte või kontseptsioone, mille kohta andmeid kogutakse.<br/>
+                <b>Näide</b>: Töötajad, Kliendid.<br/>
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>2. Atribuudid</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                Kirjeldavad entiteedi omadusi.<br/>
+                <b>Näide</b>: Töötaja entiteedil võivad olla atribuudid TöötajaID, Nimi, Amet.<br/>
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>3. Seosed</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                Määravad, kuidas entiteedid on omavahel seotud.<br/>
+                <b>Näide</b>: Seos Töötab ühendab Töötaja ja Osakond entiteete.<br/>
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>ERD Tööriistad ja Kasutusalad</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>1. Tööriistad</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Populaarsed Tööriistad</b>: Microsoft Visio, Lucidchart, MySQL Workbench, Draw.io<br/>
+                <b>Kasutamine</b>: ERD-d koostatakse tavaliselt spetsiaalsete tööriistade abil, mis toetavad diagrammide loomist ja haldamist.<br/>
+            </p>
+        </li>
+
+        <br/>
+        
+        <li>
+            <p><b>2. Kasutusalad</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                <b>Andmebaasi Disain</b>: ERD-d on esimeseks sammuks andmebaasi loogilise struktuuri kavandamisel.<br/>
+                <b>Süsteemi Analüüs</b>: Aitab analüüsida ja optimeerida andmevooge ning seoseid süsteemis.<br/>
+                <b>Dokumentatsioon</b>: Pakub visuaalset dokumentatsiooni, mis on kergesti mõistetav nii tehnilistele kui ka mittetehnilistele osapooltele.<br/>
+            </p>
+        </li>
+
+        <br/>
+        
+        <li>
+            <p><b>Kokkuvõte</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>ERD-d on võimsad ja laialdaselt kasutatavad tööriistad, mis aitavad andmebaaside loogilise struktuuri ja seoste modelleerimisel. Nende diagrammide abil saab visualiseerida andmebaasi koostisosade vahelisi seoseid, mis omakorda lihtsustab andmebaaside planeerimist, arendamist ja hooldamist.</p>
+        </li>
+
+    </ul>
+  </div>
+  <div id="menu-background-image"></div>
+  <div id="menu-background-pattern"></div>
+</body>
+</html>
