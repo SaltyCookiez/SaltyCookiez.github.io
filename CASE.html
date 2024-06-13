@@ -5,18 +5,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASE</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
-<link rel="stylesheet" href="style2.css">
-    <body>
-        <div class="wrapper">
-            <div class="controls">
-              <h1>CASE KONSPEKT</h1>
-            </div>
-            <ul class="task-box"></ul>
-          </div>
-          <div id="menu-background-image"></div>
-          <div id="menu-background-pattern"></div>
-          <script src="script.js"></script>
+<body>
+  <div class="wrapper">
+    <div class="controls">
+      <h1>CASE KONSPEKT</h1>
+    </div>
+    <ul class="task-box">
+            
+      <li>
+        <p><b>Case</b></p>
+      </li>
+        
+      <br/>
 
-    </body>
+      <li>
+        <p>CASE on SQL-i (Structured Query Language) lause, mida kasutatakse tingimuslike loogikate loomiseks päringutes. CASE lauset saab kasutada SELECT, INSERT, UPDATE ja DELETE käskudes, et lisada keerukamaid tingimuslikke avaldisi.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p><b>CASE Struktuur</b></p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>CASE lause on üles ehitatud järgmiselt:</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>
+          CASE<br/>
+            WHEN tingimus1 THEN väärtus1<br/>
+            WHEN tingimus2 THEN väärtus2<br/>
+            ...<br/>
+            ELSE vaikeväärtus<br/>
+          END<br/>
+        </p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p><b>WHEN tingimus THEN väärtus</b>: Iga tingimus kontrollitakse järjekorras. Kui tingimus on tõene, tagastatakse seotud väärtus. <b>ELSE vaikeväärtus</b>: Kui ükski tingimus ei ole tõene, tagastatakse vaikeväärtus. ELSE osa on valikuline, kuid soovitatav kasutada, et vältida NULL väärtuste tagastamist.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p><b>CASE Kasutamine SELECT lauses</b></p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>CASE lause on sageli kasutusel SELECT lauses, et muuta tulemuste vormindust või väärtusi dünaamiliselt.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>Näide:</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>
+          SELECT<br/>
+            töötaja_nimi,<br/>
+            palk,<br/>
+            CASE<br/>
+              WHEN palk < 3000 THEN 'Madal'<br/>
+              WHEN palk BETWEEN 3000 AND 6000 THEN 'Keskmine'<br/>
+              ELSE 'Kõrge'<br/>
+          END AS palga_tase<br/>
+          FROM töötajad;<br/>
+        </p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>Selles näites määratakse töötaja palga tase vastavalt palga väärtusele.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p><b>CASE Kasutamine UPDATE lauses</b></p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>CASE lauset saab kasutada ka UPDATE lauses, et uuendada ridu tingimuslikult.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>Näide:</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>
+          UPDATE töötajad<br/>
+          SET palk = CASE<br/>
+              WHEN ametikoht = 'Junior' THEN palk * 1.1<br/>
+              WHEN ametikoht = 'Senior' THEN palk * 1.05<br/>
+              ELSE palk * 1.02<br/>
+          END;<br/>
+        </p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>Selles näites uuendatakse töötajate palku vastavalt nende ametikohtadele.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p><b>CASE Kasutamine ORDER BY lauses</b></p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>CASE lause võib olla kasulik ka andmete sorteerimisel spetsiifiliste tingimuste alusel.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>Näide:</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>
+          SELECT töötaja_nimi, palk<br/>
+          FROM töötajad<br/>
+          ORDER BY<br/>
+              CASE<br/>
+                  WHEN ametikoht = 'Manager' THEN 1<br/>
+                  WHEN ametikoht = 'Senior' THEN 2<br/>
+                  ELSE 3<br/>
+              END;<br/>
+        </p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>Selles näites sorteeritakse töötajad esimesena managerid, siis seniorid ja lõpuks kõik teised.</p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p><b>Kokkuvõte</b></p>
+      </li>
+
+      <br/>
+
+      <li>
+        <p>CASE lause on võimas vahend SQL-is, võimaldades tingimuslikke loogikate kasutamist päringutes, et muuta andmete valimist, uuendamist ja sorteerimist dünaamilisemaks ja paindlikumaks. Peamised kasutusvaldkonnad hõlmavad SELECT, UPDATE ja ORDER BY lauseid, kuid seda saab kasutada ka muudes SQL käskudes vastavalt vajadusele.</p>
+      </li>
+    </ul>
+  </div>
+  <div id="menu-background-image"></div>
+  <div id="menu-background-pattern"></div>
+</body>
 </html>
