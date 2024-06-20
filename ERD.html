@@ -37,48 +37,66 @@
         <br/>
 
         <li>
-            <p><b>1. Entiteet (Entity)</b></p>
+            <p><b>Entiteet (Entity)</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                <b>Eesmärk</b>: Esindab andmebaasis talletatavat objekti või kontseptsiooni.<br/>
-                <b>Näited</b>: Töötaja, Klient, Tellimus.<br/>
-                <b>Sümbol</b>: Ristkülik.<br/>
+                ERD-s tähistab entiteet konkreetset objekti või asja andmebaasis, mida soovitakse salvestada. Entiteet omab atribuute, mis kirjeldavad selle omadusi või tunnuseid. Näiteks võib entiteet "Customer" esindada klientide kogumit, kus iga kliendi jaoks on atribuudid nagu nimi, aadress ja telefoninumber. Entiteedid on ERD-s esitatud kastidena, mis sisaldavad loetletud atribuute. Entiteedid on olulised andmebaasi disainis, kuna need aitavad struktureerida andmeid vastavalt süsteemi vajadustele ja tagavad, et igal entiteedil on selgelt määratletud roll andmebaasis. Entiteetide ja nende omaduste määratlemine on algne samm andmebaasi modelleerimisel, aidates arendajatel ja disaineritel mõista süsteemi struktuuri ja loogikat.
             </p>
         </li>
 
         <br/>
 
         <li>
-            <p><b>2. Atribuut (Attribute)</b></p>
+            <p><b>Atribuut (Attribute)</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                <b>Eesmärk</b>: Entiteedi omadused või tunnused, mis salvestavad konkreetseid andmeid.<br/>
-                <b>Näited</b>: Nimi, Vanus, Aadress.<br/>
-                <b>Sümbol</b>: Ellips.<br/>
+                ERD-s tähistab atribuut entiteedi omadust või tunnust, mis kirjeldab konkreetset andmebaasi objekti või entiteeti. Atribuut määratleb, millist teavet hoitakse iga entiteedi jaoks ning aitab eristada ühte entiteeti teistest samas andmebaasis. Näiteks kliendi entiteedi atribuudid võivad hõlmata nime, aadressi, telefoni ja e-posti aadressi.
             </p>
         </li>
 
         <br/>
 
         <li>
-            <p><b>3. Seos (Relationship)</b></p>
+            <p>
+                Atribuudid võivad olla erinevat tüüpi, sealhulgas täisarvud, sõned, kuupäevad, loogilised väärtused jne, sõltuvalt sellest, millist tüüpi teavet nad esindavad. Näiteks kliendi entiteedi atribuut "CustomerID" võib olla täisarv, mis unikaalselt identifitseerib iga klienti süsteemis, samas kui "Name" ja "Address" on sõned, mis esindavad kliendi nime ja aadressi.
+            </p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                <b>Eesmärk</b>: Kirjeldab, kuidas entiteedid omavahel seotud on.<br/>
-                <b>Näited</b>: Töötab, Esitab, Ostab.<br/>
-                <b>Sümbol</b>: Teemant.<br/>
+                ERD-s kuvatakse atribuudid tavaliselt entiteedi kastide sees koos nimetusega, mis kirjeldab atribuudi tüüpi ja funktsiooni. Atribuutide korrektne määratlemine ja dokumenteerimine on oluline, et tagada andmebaasi kavandamine vastavalt äri- ja süsteemi nõuetele ning tagada, et igal entiteedil on täpselt määratletud andmestruktuur.
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>Seos (Relationship)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                ERD-s tähistab suhe (relationship) seost kahe või enama entiteedi vahel. See määratleb, kuidas üks entiteet on seotud teisega andmebaasis. Suhteid saab esitada erinevate tüüpidega, sealhulgas üks-ühele, üks-mitmele ja mitmelt-mitmele, sõltuvalt sellest, kuidas entiteedid omavahel seotud on. Suhteid kujutatakse ERD-s nooltega, mis ühendavad seotud entiteete ja näitavad suhte suunda ning tüüpi. Näiteks võib olla suhe "üks-kuni-mitmele" klientide ja tellimuste vahel, kus üks klient saab teha mitu tellimust.
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                Suhted aitavad modelleerida süsteemi terviklikkust, näidates, kuidas erinevad andmed on omavahel seotud ja kuidas neid seoseid tuleks tõhusalt hallata andmebaasi kavandamisel ja arendamisel.
             </p>
         </li>
 
@@ -92,9 +110,7 @@
 
         <li>
             <p>
-                <b>Eesmärk</b>: Unikaalsed tuvastajad, mis eristavad entiteete.<br/>
-                <b>Näited</b>: Põhivõti (Primary Key), Võõrvõti (Foreign Key).<br/>
-                <b>Sümbol</b>: Põhivõtme jaoks allajoonitud atribuut.<br/>
+                ERD-s tähistab võti entiteedi omadust, mis unikaalselt identifitseerib iga entiteedi eksemplari. Võti võib olla primaarvõti (primary key), mis eristab entiteete, või võõrvõti (foreign key), mis seob entiteede vahelisi suhteid.
             </p>
         </li>
 
@@ -107,45 +123,58 @@
         <br/>
 
         <li>
-            <p><b>1. Üks-ühele (One-to-One)</b></p>
+            <p><b>Üks-ühele (One-to-One)</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                <b>Näide</b>: Igal töötajal on üks töölaud ja igal töölaul on üks töötaja.<br/>
-                <b>Sümbol</b>: 1:1<br/>
+                Üks-ühele suhe ERD-s on tüüpiline andmebaasidisaini muster, kus üks entiteet on seotud teise entiteediga täpselt ühe vastavusega. See tähendab, et iga entiteedi eksemplar esineb vaid ühe korra vastava teise entiteedi eksemplariga.
             </p>
         </li>
         
         <br/>
 
         <li>
-            <p><b>2. Üks-mitmele (One-to-Many)</b></p>
-        </li>
-
-        <br/>
-
-        <li>
             <p>
-                <b>Näide</b>: Üks klient võib esitada mitu tellimust, kuid iga tellimus kuulub ühele kliendile.<br/>
-                <b>Sümbol</b>: 1<br/>
+                Selline suhe esineb sageli juhtudel, kus on olemas selge ja eristav seos kahe entiteedi vahel, mis peab olema üks-ühele vastavus. Näiteks võib olla üks-ühele suhe "Employee" (Töötaja) ja "EmployeeDetails" (Töötaja andmed), kus iga töötaja entiteet on seotud täpselt ühe töötaja andmete entiteediga. Üks-ühele suhte kardinaalsus määratleb, et igal entiteedi eksemplaril on täpselt üks ja ainult üks seotud entiteedi eksemplar. See kardinaalsus on oluline andmebaasisüsteemide kavandamisel, kuna see aitab säilitada andmete terviklikkust ja tagab, et iga entiteet on selgelt määratletud ilma dubleerimiseta. ERD-s kujutatakse üks-ühele suhet tavaliselt noolega, mis ühendab kaks entiteedikasti. Noole otsas võib olla märgis, mis täpsustab suhte olemust (nt "1:1" või "1..1"). Primaarvõti (primary key) ühes entiteedis toimib tavaliselt võõrvõtmena (foreign key) teises entiteedis, tagades seose ainulaadsuse ja korrektsuse.
             </p>
         </li>
         
         <br/>
 
         <li>
-            <p><b>3. Mitu-mitmele (Many-to-Many)</b></p>
+            <p>
+                Üks-ühele suhted võivad olla kasulikud olukordades, kus on vaja eraldada või eraldada seotud andmeid, kuid säilitada kindel ja üheselt mõistetav seos kahe entiteedi vahel.
+            </p>
+        </li>
+        
+        <br/>
+
+        <li>
+            <p><b>Üks-mitmele (One-to-Many)</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                <b>Näide</b>:  Paljudel õpilastel võib olla palju kursusi ja iga kursus võib hõlmata palju õpilasi.<br/>
-                <b>Sümbol</b>: M<br/>
+                Üks-mitmele suhe ERD-s viitab olukorrale, kus üks entiteedi eksemplar on seotud mitme teise entiteedi eksemplariga. See tähendab, et ühe entiteedi eksemplar vastab mitmele teise entiteedi eksemplarile. Näiteks võib üks kliendi entiteet olla seotud mitmete tellimuse entiteetidega, kus iga tellimus vastab ühele konkreetsele kliendile.
+            </p>
+        </li>
+        
+        <br/>
+
+        <li>
+            <p><b>Mitu-mitmele (Many-to-Many)</b></p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p>
+                Mitmelt-mitmelt suhe ERD-s viitab olukorrale, kus üks entiteedi eksemplar on seotud mitme teise entiteedi eksemplariga ning vastupidi, mitu entiteedi eksemplari on seotud mitme teise entiteedi eksemplariga. Selline suhe nõuab tavaliselt vahetabelit või liidestustabelit, mis kajastab seoseid kahe entiteedi vahel. Näiteks võib olla mitmelt-mitmelt suhe "Student" (Üliõpilane) ja "Course" (Kursus), kus üks üliõpilane saab osaleda mitmes kursuses ja üks kursusel saab osaleda mitu üliõpilast. ERD-s kujutatakse sellist suhet tavaliselt nooltega, mis ühendavad kahte entiteedikasti ja märgistatakse kardinaalsusmärgisega "M", mis tähistab mitmelt-mitmelt suhet.
             </p>
         </li>
         
@@ -158,30 +187,36 @@
         <br/>
 
         <li>
-            <p><b>1. Entiteedid</b></p>
+            <p><b>Entiteedid</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                Kujutavad reaalmaailma objekte või kontseptsioone, mille kohta andmeid kogutakse.<br/>
-                <b>Näide</b>: Töötajad, Kliendid.<br/>
+                ERD-s on entiteedid üks põhikomponentidest, mis esindavad andmebaasis hoidmiseks mõeldud konkreetseid objekte või asju. Entiteedid on olulised, sest need kirjeldavad andmebaasisüsteemis säilitatavaid põhilisi andmeühikuid või objekte, millel on kindlad omadused või atribuudid.
             </p>
         </li>
 
         <br/>
 
         <li>
-            <p><b>2. Atribuudid</b></p>
+            <p>
+                Iga entiteet on esitatud ERD-s kastina, mille sees on loetletud selle entiteedi atribuudid. Näiteks võib olla entiteet "Customer" (Klient), millel on atribuudid nagu CustomerID, Name, Address, Phone jne. Entiteedi atribuudid on omadused või tunnused, mis aitavad eristada ja täpsustada iga entiteedi eksemplari. Entiteetide määratlemine ERD-s aitab tarkvaraarendajatel ja andmebaasi arhitektidel struktureerida andmeid vastavalt süsteemi nõuetele ning tagada, et kõik vajalik teave on selgelt määratletud ja hõlpsasti juurdepääsetav. Lisaks aitab entiteetide ja nende omaduste korrektne identifitseerimine ERD-s luua aluse tõhusale andmebaasi kavandamisele ja optimeerimisele, mis omakorda toetab süsteemi stabiilsust, jõudlust ja kasutusmugavust.
+            </p>
+        </li>
+
+        <br/>
+
+        <li>
+            <p><b>Atribuudid</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                Kirjeldavad entiteedi omadusi.<br/>
-                <b>Näide</b>: Töötaja entiteedil võivad olla atribuudid TöötajaID, Nimi, Amet.<br/>
+                ERD-s tähistavad atribuudid entiteetide omadusi või tunnuseid, mis määratlevad, millist teavet hoitakse andmebaasis iga entiteedi jaoks. Atribuudid võivad olla erinevatest tüüpidest, näiteks täisarvud, sõned, kuupäevad jne, sõltuvalt sellest, millist tüüpi teavet nad esindavad. Näiteks võib kliendi entiteedi atribuutideks olla nimi, aadress, telefoninumber ja e-posti aadress. ERD-s kuvatakse atribuudid tavaliselt entiteedikastides koos entiteedi nime ja atribuutide nimetusega, mis aitab täpsustada andmebaasi struktuuri ja informatsiooni, mida iga entiteet käsitleb
             </p>
         </li>
 
@@ -195,8 +230,7 @@
 
         <li>
             <p>
-                Määravad, kuidas entiteedid on omavahel seotud.<br/>
-                <b>Näide</b>: Seos Töötab ühendab Töötaja ja Osakond entiteete.<br/>
+                ERD-s tähistavad seosed seotust kahe või enama entiteedi vahel. Need seosed määratlevad, kuidas üks entiteet on seotud teisega andmebaasis. Seosed võivad olla erinevat tüüpi, sealhulgas üks-ühele, üks-mitmele ja mitmelt-mitmelt, sõltuvalt sellest, kuidas entiteedid omavahel seotud on. Näiteks võib kliendi ja tellimuse vaheline suhe olla üks-kuni-mitmele, kus üks klient võib omada mitmeid tellimusi. ERD-s kujutatakse seoseid nooltega, mis ühendavad seotud entiteedid, ja neil võib olla kardinaalsusmärgis (näiteks "1:1", "1" või "M"), et täpsustada suhte tüüpi ja reeglite piiranguid, mis kehtivad seoste vahel andmebaasis. Seosed on olulised andmebaasi kavandamisel ja modelleerimisel, kuna need aitavad määratleda andmete vahelisi loogilisi sidemeid ja tagada andmebaasi struktuuri terviklikkus ning jõudlus.
             </p>
         </li>
 
@@ -209,31 +243,44 @@
         <br/>
 
         <li>
-            <p><b>1. Tööriistad</b></p>
+            <p><b>Tööriistad</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                <b>Populaarsed Tööriistad</b>: Microsoft Visio, Lucidchart, MySQL Workbench, Draw.io<br/>
-                <b>Kasutamine</b>: ERD-d koostatakse tavaliselt spetsiaalsete tööriistade abil, mis toetavad diagrammide loomist ja haldamist.<br/>
+                ERD tööriistad ulatuvad lihtsatest diagrammitööriistadest kuni keerukate andmebaasi kavandamise tarkvaradeni. Need tööriistad võimaldavad arendajatel ja andmebaasi arhitektidel luua, hallata ja optimieerida andmebaase, pakkudes samal ajal vahendeid andmete visuaalseks modelleerimiseks ja süsteemi struktuuri selgitamiseks.
             </p>
         </li>
 
         <br/>
         
         <li>
-            <p><b>2. Kasutusalad</b></p>
+            <p><b>Kasutusalad</b></p>
         </li>
 
         <br/>
 
         <li>
             <p>
-                <b>Andmebaasi Disain</b>: ERD-d on esimeseks sammuks andmebaasi loogilise struktuuri kavandamisel.<br/>
-                <b>Süsteemi Analüüs</b>: Aitab analüüsida ja optimeerida andmevooge ning seoseid süsteemis.<br/>
-                <b>Dokumentatsioon</b>: Pakub visuaalset dokumentatsiooni, mis on kergesti mõistetav nii tehnilistele kui ka mittetehnilistele osapooltele.<br/>
+                ERD kasutusalad ulatuvad andmebaasi kavandamisest ja arendamisest organisatsiooni süsteemide analüüsini ning nende juhtimiseni. ERD-d aitavad andmebaasi arhitektidel ja arendajatel visualiseerida andmebaasi struktuuri, sealhulgas entiteete, nende omadusi ja omavahelisi suhteid. See aitab tagada andmebaasi tõhusa ja korrektse kavandamise vastavalt äri- või organisatsioonilistele vajadustele.
+            </p>
+        </li>
+
+        <br/>
+        
+        <li>
+            <p>
+                ERD-d on kasulikud süsteemianalüüsis ja disainis, aidates määratleda süsteemi komponente, nende omavahelisi seoseid ja kasutajate andmevajadusi. Need aitavad paremini mõista, kuidas erinevad andmeelemendid on omavahel seotud ja kuidas neid saab süsteemi tõhusaks toimimiseks optimeerida. ERD-d toimivad olulise dokumentatsioonina, mis kirjeldab süsteemi andmebaasi struktuuri ja loogikat. See dokumentatsioon on kasulik uute arendajate koolitamisel, süsteemi hooldamisel ja tulevaste arenduste planeerimisel. ERD-d aitavad kaasa andmete integreerimisele erinevatest allikatest ja andmete migreerimisele uute süsteemide või platvormide vahel. Need tagavad, et andmeid töödeldakse ja hoitakse ühtsel ja struktureeritud viisil, mis toetab organisatsiooni äriprotsesse.
+            </p>
+        </li>
+
+        <br/>
+        
+        <li>
+            <p>
+                ERD-d võivad aidata kaasa äriprotsesside optimeerimisele, kuna need annavad ülevaate, kuidas andmed voolavad süsteemis ja kuidas neid saab paremini hallata, et saavutada tõhusust ja vähendada kulusid.
             </p>
         </li>
 
