@@ -32,7 +32,11 @@
 
         <br/>
 
-        <img src="https://wcs.smartdraw.com/entity-relationship-diagram/img/entity-relationship-diagram-tutorial.png?bn=15100111938" width="700" height="500">
+        <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/seo/ERD/discovery/erd-example.svg" width="700" height="500">
+
+        <br/>
+
+        <img src="https://www.smartdraw.com/entity-relationship-diagram/img/internet-sales-model.png" width="700" height="500">
 
         <br/>
 
@@ -47,6 +51,10 @@
                 ERD-s tähistab entiteet konkreetset objekti või asja andmebaasis, mida soovitakse salvestada. Entiteet omab atribuute, mis kirjeldavad selle omadusi või tunnuseid. Näiteks võib entiteet "Customer" esindada klientide kogumit, kus iga kliendi jaoks on atribuudid nagu nimi, aadress ja telefoninumber. Entiteedid on ERD-s esitatud kastidena, mis sisaldavad loetletud atribuute. Entiteedid on olulised andmebaasi disainis, kuna need aitavad struktureerida andmeid vastavalt süsteemi vajadustele ja tagavad, et igal entiteedil on selgelt määratletud roll andmebaasis. Entiteetide ja nende omaduste määratlemine on algne samm andmebaasi modelleerimisel, aidates arendajatel ja disaineritel mõista süsteemi struktuuri ja loogikat.
             </p>
         </li>
+
+        <br/>
+
+        <img src="Entity.PNG" width="700" height="360">
 
         <br/>
 
@@ -80,6 +88,10 @@
 
         <br/>
 
+        <img src="Attribute.PNG" width="700" height="360">
+
+        <br/>
+
         <li>
             <p><b>Seos (Relationship)</b></p>
         </li>
@@ -102,17 +114,7 @@
 
         <br/>
 
-        <li>
-            <p><b>Võti (Key)</b></p>
-        </li>
-
-        <br/>
-
-        <li>
-            <p>
-                ERD-s tähistab võti entiteedi omadust, mis unikaalselt identifitseerib iga entiteedi eksemplari. Võti võib olla primaarvõti (primary key), mis eristab entiteete, või võõrvõti (foreign key), mis seob entiteede vahelisi suhteid.
-            </p>
-        </li>
+        <img src="Relationship.PNG" width="700" height="360">
 
         <br/>
 
@@ -152,6 +154,10 @@
         
         <br/>
 
+        <b>Sümbol</b>: 1:1<br/>
+
+        <br/>
+
         <li>
             <p><b>Üks-mitmele (One-to-Many)</b></p>
         </li>
@@ -164,6 +170,10 @@
             </p>
         </li>
         
+        <br/>
+
+        <b>Sümbol</b>: 1<br/>
+
         <br/>
 
         <li>
@@ -180,59 +190,11 @@
         
         <br/>
 
-        <li>
-            <p><b>ERD Komponendid</b></p>
-        </li>
+        <b>Sümbol</b>: M<br/>
 
         <br/>
 
-        <li>
-            <p><b>Entiteedid</b></p>
-        </li>
-
-        <br/>
-
-        <li>
-            <p>
-                ERD-s on entiteedid üks põhikomponentidest, mis esindavad andmebaasis hoidmiseks mõeldud konkreetseid objekte või asju. Entiteedid on olulised, sest need kirjeldavad andmebaasisüsteemis säilitatavaid põhilisi andmeühikuid või objekte, millel on kindlad omadused või atribuudid.
-            </p>
-        </li>
-
-        <br/>
-
-        <li>
-            <p>
-                Iga entiteet on esitatud ERD-s kastina, mille sees on loetletud selle entiteedi atribuudid. Näiteks võib olla entiteet "Customer" (Klient), millel on atribuudid nagu CustomerID, Name, Address, Phone jne. Entiteedi atribuudid on omadused või tunnused, mis aitavad eristada ja täpsustada iga entiteedi eksemplari. Entiteetide määratlemine ERD-s aitab tarkvaraarendajatel ja andmebaasi arhitektidel struktureerida andmeid vastavalt süsteemi nõuetele ning tagada, et kõik vajalik teave on selgelt määratletud ja hõlpsasti juurdepääsetav. Lisaks aitab entiteetide ja nende omaduste korrektne identifitseerimine ERD-s luua aluse tõhusale andmebaasi kavandamisele ja optimeerimisele, mis omakorda toetab süsteemi stabiilsust, jõudlust ja kasutusmugavust.
-            </p>
-        </li>
-
-        <br/>
-
-        <li>
-            <p><b>Atribuudid</b></p>
-        </li>
-
-        <br/>
-
-        <li>
-            <p>
-                ERD-s tähistavad atribuudid entiteetide omadusi või tunnuseid, mis määratlevad, millist teavet hoitakse andmebaasis iga entiteedi jaoks. Atribuudid võivad olla erinevatest tüüpidest, näiteks täisarvud, sõned, kuupäevad jne, sõltuvalt sellest, millist tüüpi teavet nad esindavad. Näiteks võib kliendi entiteedi atribuutideks olla nimi, aadress, telefoninumber ja e-posti aadress. ERD-s kuvatakse atribuudid tavaliselt entiteedikastides koos entiteedi nime ja atribuutide nimetusega, mis aitab täpsustada andmebaasi struktuuri ja informatsiooni, mida iga entiteet käsitleb
-            </p>
-        </li>
-
-        <br/>
-
-        <li>
-            <p><b>3. Seosed</b></p>
-        </li>
-
-        <br/>
-
-        <li>
-            <p>
-                ERD-s tähistavad seosed seotust kahe või enama entiteedi vahel. Need seosed määratlevad, kuidas üks entiteet on seotud teisega andmebaasis. Seosed võivad olla erinevat tüüpi, sealhulgas üks-ühele, üks-mitmele ja mitmelt-mitmelt, sõltuvalt sellest, kuidas entiteedid omavahel seotud on. Näiteks võib kliendi ja tellimuse vaheline suhe olla üks-kuni-mitmele, kus üks klient võib omada mitmeid tellimusi. ERD-s kujutatakse seoseid nooltega, mis ühendavad seotud entiteedid, ja neil võib olla kardinaalsusmärgis (näiteks "1:1", "1" või "M"), et täpsustada suhte tüüpi ja reeglite piiranguid, mis kehtivad seoste vahel andmebaasis. Seosed on olulised andmebaasi kavandamisel ja modelleerimisel, kuna need aitavad määratleda andmete vahelisi loogilisi sidemeid ja tagada andmebaasi struktuuri terviklikkus ning jõudlus.
-            </p>
-        </li>
+        <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/erd-symbols/ERD-Notation.PNG" width="700" height="360">
 
         <br/>
 
